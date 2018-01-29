@@ -9,6 +9,7 @@ namespace IntroToOOPSpring18
     class Cat
     {
         //I need STATES
+        private string name;
         //I need BEHAVIORS
     }
 }
