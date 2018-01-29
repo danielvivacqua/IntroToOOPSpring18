@@ -8,12 +8,13 @@ namespace IntroToOOPSpring18
 {
     class Cat
     {
-       
+       //STATES
         //fields
         private string name;
         private int age;
         private string furColor;
         private bool isHungry = true;
+        private string hairLength;
 
        //Properties
        public string Name
@@ -22,6 +23,13 @@ namespace IntroToOOPSpring18
             set { this.name = value; }
         }
 
+        public string HairLength
+        {
+            get { return this.hairLength; }
+            set { this.hairLength = value; }
+        }
+
+        //BEHAVIORS
         //Constructors
         public Cat()
         {
@@ -36,6 +44,12 @@ namespace IntroToOOPSpring18
             this.furColor = furColor;
         }
 
+        public Cat(int age, bool isHungry)
+        {
+            this.age = age;
+            this.isHungry = isHungry;
+        }
+
         //methods
         public void Eat()
         {
@@ -45,6 +59,23 @@ namespace IntroToOOPSpring18
             }
 
             Console.WriteLine("Is the cat hungry? " + isHungry);
+        }
+
+        public void Meow()
+        {
+            Console.WriteLine("\a");
+        }
+
+        public string Hairball()
+        {
+            if (hairLength == "too long")
+            {
+                return (this.name + " has a hairball.");
+            }
+            else
+            {
+                return (this.name + " is nicely groomed.");
+            }
         }
 
 
